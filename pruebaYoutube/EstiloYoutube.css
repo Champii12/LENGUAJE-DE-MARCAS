@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+}
+
+header {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.nuevos-lanzamientos {
+    text-align: center; /* Centra el texto "Nuevos lanzamientos" */
+}
+
+.nuevos-lanzamientos h2 {
+    margin-bottom: 20px; /* Espacio debajo del texto "Nuevos lanzamientos" */
+}
+
+.canciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cancion {
+    width: calc(25% - 20px); /* El ancho de cada cuadrado (25% del ancho total menos el espacio entre ellos) */
+    margin-bottom: 20px; /* Espacio debajo de los cuadrados */
+    text-align: center; /* Centrar el contenido */
+}
+
+.cancion img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho del cuadrado */
+}
+
+.cancion p {
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+}
+.controles {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Estilo para el footer (reproductor de música) */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #212121;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Ajusta la altura del footer */
+}
+
+/* Estilo para los controles de reproducción */
+.controles button {
+    background-color: transparent; /* Cambia el color de fondo a transparente */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Ajusta el tamaño de la fuente */
+}
+
+.controles .previous,
+.controles .next {
+    font-size: 36px; /* Ajusta el tamaño de los botones de anterior y siguiente */
+    margin: 0 10px; /* Ajusta el margen entre los botones */
+}

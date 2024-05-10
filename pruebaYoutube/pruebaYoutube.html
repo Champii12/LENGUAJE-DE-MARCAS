@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Music</title>
+    <link rel="stylesheet" href="EstiloYoutube.css">
+    <link rel="icon" type="png" href="youtube_music_icon.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="youtube_music_icon.png" alt="YouTube Music">
+        </div>
+        
+    </header>
+
+    <main>
+        <section class="destacados">
+            <h2>Lo mejor de hoy</h2>
+            <!-- Aquí puedes agregar contenido destacado -->
+        </section>
+        
+        <section class="nuevos-lanzamientos">
+            <div id="mensaje-bienvenida"></div>
+            <!-- Aquí puedes agregar nuevos lanzamientos -->
+            <div class="canciones">
+                <div class="cancion" onclick="playMusic('XCLUSIVO REMIX.mp3', 'XCLUSIVO REMIX', 'Gonzy, Saiko y Arcangel')">
+                    <img src="fotos/cancion1.png" alt="Canción 1">
+                    <p>XCLUSIVO REMIX</p>
+                </div>
+                <div class="cancion" onclick="playMusic('VVS SWITCH Remix.mp3', 'VVS SWITCH Remix', 'Pressure9x19, AnuelAA, YovngChimi y Hades66')">
+                    <img src="fotos/cancion2.png" alt="Canción 2">
+                    <p>VVS SWITCH Remix</p>
+                </div>
+                <div class="cancion" onclick="playMusic('Lollipop.mp3', 'Lollipop', 'Darell')">
+                    <img src="fotos/cancion3.png" alt="Canción 3">
+                    <p>Lollipop</p>
+                </div>
+                <div class="cancion" onclick="playMusic('LO QUE TIENE.mp3', 'LO QUE TIENE', 'Beny Jr, Morad y Rafael Ruiz Amador')">
+                    <img src="fotos/cancion4.png" alt="Canción 4">
+                    <p>Lo que tiene</p>
+                </div>
+                <div class="cancion" onclick="playMusic('JAPONI.mp3', 'JAPONI', 'Omar Montes, Oscar el Ruso, Samuel G, Camin, Moncho Chavea, Jthyago y Samueliyo Baby')">
+                    <img src="fotos/cancion5.png" alt="Canción 5">
+                    <p>Japoni</p>
+                </div>
+                <div class="cancion" onclick="playMusic('GATA ONLY.mp3', 'GATA ONLY', 'Cris MJ y FloyyMenor')">
+                    <img src="fotos/cancion6.png" alt="Canción 6">
+                    <p>Gata Only</p>
+                </div>
+                <div class="cancion" onclick="playMusic('A 300.mp3', 'A 300', 'JC Reyes y Pedro Calderón')">
+                    <img src="fotos/cancion7.png" alt="Canción 7">
+                    <p>A 300</p>
+                </div>
+                <div class="cancion" onclick="playMusic('105F RMX.mp3', '105F RMX', 'Chencho Corleone, Farruko y Kevvo')">
+                    <img src="fotos/cancion8.png" alt="Canción 8">
+                    <p>105F Remix</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="reproductor-container">
+        <audio id="reproductor" controls>
+            <source src="" type="audio/mpeg">
+            Tu navegador no soporta el elemento audio.
+        </audio>
+
+        <!-- Información de reproducción -->
+        <div id="info-cancion">
+            <p id="nombre-cancion">Nombre de la Canción</p>
+            <p id="autor-cancion">Autor</p>
+        </div>
+
+        <!-- Controles de reproducción -->
+        <div class="controles">
+            <button class="previous" onclick="previousSong()">&lt;</button>
+            <button id="playPauseButton" onclick="togglePlayPause()">Play</button>
+            <button class="next" onclick="nextSong()">&gt;</button>
+        </div>
+    </footer>
+
+    <script src="PruebaYT.js"></script>
+</body>
+</html>
