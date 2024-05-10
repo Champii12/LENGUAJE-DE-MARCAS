@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/55bf758df4.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="estiloLogin.css">
+    <link rel = "icon" type="png"
+        href="youtube_music_icon.png">
+    <title>Login Youtube Music</title>
+</head>
+<body>
+    <section>
+        <div class="contenedor">
+            <div class="formulario">
+                <form id="loginForm" action="#">
+                    <h2>Iniciar Sesión</h2>
+
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" id="nombre" required>
+                        <label for="#">Nombre</label>
+                    </div>
+
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="contrasena" required>
+                        <label for="#">Contraseña</label>
+                    </div>
+
+                    <div class="olvidar">
+                        <label for="#">
+                            <input type="checkbox">
+                            <a href="#">Olvidé mi contraseña</a>
+                        </label>
+                    </div>
+
+                    <!-- Ocultar el botón de enviar por defecto y usar un botón de tipo submit -->
+                    <button id="loginButton" type="submit" style="display: none;">Acceder</button>
+                </form>
+
+                <div>
+                    <!-- Utilizar un botón separado para enviar el formulario -->
+                    <button id="submitButton">Acceder</button>
+                    <div class="registrar">
+                        <p>No tengo cuenta<a href="#"> Crear una</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Función para verificar las credenciales y redirigir al usuario
+        function verificarCredenciales() {
+            // Obtener los valores del nombre y la contraseña
+            var nombre = document.getElementById("nombre").value;
+            var contrasena = document.getElementById("contrasena").value;
+
+            // Definir los nombres de usuario permitidos y la contraseña común
+            var nombresPermitidos = ["Andrés", "Alejandro", "David"];
+            var contrasenaComun = "LenguajeDeMarcas";
+
+            // Verificar si el nombre de usuario está permitido y si la contraseña es correcta
+            if (nombresPermitidos.includes(nombre) && contrasena === contrasenaComun) {
+                // Credenciales correctas, redireccionar al usuario a youtube.html
+                window.location.href = "pruebaYoutube.html";
+            } else {
+                // Credenciales incorrectas, mostrar un mensaje de error
+                alert("Nombre de usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
+            }
+        }
+
+        // Agregar un listener de eventos al formulario para manejar el evento de envío
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe automáticamente
+            verificarCredenciales();
+        });
+
+        // Agregar un listener de eventos al botón para manejar el clic
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe automáticamente
+            verificarCredenciales();
+        });
+    </script>
+</body>
+</html>
